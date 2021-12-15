@@ -1,0 +1,46 @@
+version: '3.3'
+services:
+  axonserver:
+    image: axoniq/axonserver
+    container_name: esedm-axonserver
+    # hostname: axonserver
+    volumes:
+      - esedm-axonserver-data:/data
+      - esedm-axonserver-events:/eventdata
+      - esedm-axonserver-config:/config:ro
+    ports:
+      - '8024:8024'
+      - '8124:8124'
+      - '8224:8224'
+    restart: unless-stopped # or always  
+    networks:
+      - esedm-backend
+
+volumes:
+  esedm-axonserver-data:
+  esedm-axonserver-events:
+  esedm-axonserver-config:
+
+volumes:
+  esedm-axonserver-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/axonserver/data
+      o: bind
+  esedm-axonserver-events:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/axonserver/events
+      o: bind
+  esedm-axonserver-config:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/axonserver/config
+      o: bind
+
+networks:
+  esedm-backend:
+      external: true
