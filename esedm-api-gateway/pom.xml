@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.eybilal</groupId>
-	<artifactId>EsedmApiGateway</artifactId>
+	<artifactId>esedm-api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EsedmApiGateway</name>
+	<name>esedm-api-gateway</name>
 	<description>Easy Shop API Gateway</description>
 
 	<properties>
