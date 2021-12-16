@@ -1,0 +1,32 @@
+version: '3'
+services:
+  #----------------------------------------------------------------------------
+  # Putting the database in a container is not a good choice for Production.
+  # It is used for development and testing phase
+  #----------------------------------------------------------------------------
+
+  # db server
+  esedm-db:
+    image: postgres:alpine
+    container_name: esedm-db
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - esedm-db-data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    restart: unless-stopped # or always
+    networks:
+      - esedm-backend
+ 
+# Volumes
+volumes:
+    esedm-db-data:
+      external: true
+  
+# Network to be used across multiple services    
+networks:
+    esedm-backend:
+        external: true
