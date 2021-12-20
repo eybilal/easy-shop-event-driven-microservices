@@ -16,7 +16,7 @@ services:
     volumes:
       - esedm-db-data:/var/lib/postgresql/data
     ports:
-      - '5432:5432'
+      - '5433:5432'
     restart: unless-stopped # or always
     networks:
       - esedm-backend
