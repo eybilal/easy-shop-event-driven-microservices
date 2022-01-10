@@ -14,7 +14,7 @@ import java.util.Collection;
 @RequiredArgsConstructor
 @RequestMapping(InventoryRestController.BASE_PATH)
 public class InventoryRestController {
-    public static final String BASE_PATH = "/api/v1";
+    public static final String BASE_PATH = "/api/v2";
 
     private final InventoryService inventoryService;
 
