@@ -1,9 +1,9 @@
 version: '3.3'
 services:
-  axonserver:
+  esedm-axonserver:
     image: axoniq/axonserver
     container_name: esedm-axonserver
-    # hostname: axonserver
+    # hostname: esedm-axonserver
     volumes:
       - esedm-axonserver-data:/data
       - esedm-axonserver-events:/eventdata
