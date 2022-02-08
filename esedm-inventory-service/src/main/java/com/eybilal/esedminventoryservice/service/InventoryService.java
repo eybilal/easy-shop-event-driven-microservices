@@ -1,7 +1,7 @@
 package com.eybilal.esedminventoryservice.service;
 
-import com.eybilal.esedminventoryservice.entity.Category;
-import com.eybilal.esedminventoryservice.entity.Product;
+import com.eybilal.esedminventoryservice.core.entity.Category;
+import com.eybilal.esedminventoryservice.core.entity.Product;
 
 import java.util.Collection;
 

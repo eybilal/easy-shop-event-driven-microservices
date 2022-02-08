@@ -1,11 +1,11 @@
 package com.eybilal.esedminventoryservice.service;
 
-import com.eybilal.esedminventoryservice.Exception.CategoryNotFoundException;
-import com.eybilal.esedminventoryservice.Exception.ProductNotFoundException;
-import com.eybilal.esedminventoryservice.entity.Category;
-import com.eybilal.esedminventoryservice.entity.Product;
-import com.eybilal.esedminventoryservice.repository.CategoryRepository;
-import com.eybilal.esedminventoryservice.repository.ProductRepository;
+import com.eybilal.esedminventoryservice.core.exception.CategoryNotFoundException;
+import com.eybilal.esedminventoryservice.core.exception.ProductNotFoundException;
+import com.eybilal.esedminventoryservice.core.entity.Category;
+import com.eybilal.esedminventoryservice.core.entity.Product;
+import com.eybilal.esedminventoryservice.core.repository.CategoryRepository;
+import com.eybilal.esedminventoryservice.core.repository.ProductRepository;
 import com.google.common.base.Strings;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
